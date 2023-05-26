@@ -1,0 +1,16 @@
+[client]
+remote_addr = "146.190.172.105:8823" # The address of the server. The port must be the same with the port in `server.bind_addr`
+
+[client.transport]
+type = "noise"
+
+[client.transport.noise]
+remote_public_key = "j7MGyVUG5/yl1R5sUJlaJd5eQQUxxwMFMtp0vch3N34="
+
+[client.transport.tcp]
+keepalive_secs = 10
+keepalive_interval = 5
+
+[client.services.gradio]
+token = "<a password to use for this service>"
+local_addr = "127.0.0.1:7860"
